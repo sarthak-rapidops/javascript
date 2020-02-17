@@ -1,0 +1,35 @@
+<html lang="en">
+<head>
+    <title>Question 1</title>
+</head>
+<body>
+    <p>
+        <strong>
+            1. Write​ ​ a ​ ​ JavaScript​ ​ function​ ​ to​ ​ get​ ​ the​ ​ first​ ​ and​ ​ last​ ​ element​ ​ of​ ​ an​ ​ array.​ ​ Passing​ ​ a parameter​ ​ 'n'​ ​ will​ ​ return​ ​ the​ ​ first​ ​ 'n'​ ​ elements​ ​ of​ ​ the​ ​ array​ ​ and​ ​ last​ ​ ‘n’​ ​ elements​ ​ of​ ​ the array.
+    </strong>
+    </p>
+    <script>
+        function q1(n) {
+            let arr =['11','22','33','44','55','66','77','88','99','101'];
+            document.write(arr);
+            document.write("<br>");
+            if(n == "") {
+                let last =arr.length;
+                let first = last - last;
+                document.write("first element is: " + arr[first]);
+                document.write("<br>");
+                document.write("last element is: " + arr[last-1]);
+             }
+             else {
+                let first = arr.slice(0,n);
+                document.write("first element is: " + first);
+                document.write("<br>");
+                let last = arr.slice(-n);
+                document.write("last element is: " + last);
+             }
+        }
+        let n = +prompt("enter the value of n");
+        q1(n);
+    </script>    
+</body>
+</html>

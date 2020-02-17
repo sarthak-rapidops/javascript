@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>Question 8</title>        
+    </head>
+    <body>
+        <p>
+            <strong>
+                8. Write​ ​ a ​ ​ JavaScript​ ​ function​ ​ to​ ​ get​ ​ difference​ ​ between​ ​ two​ ​ dates,​ ​ from​ ​ maximum​ ​ unit​ ​ to minimum​ ​ unit.
+        </strong>
+        </p>
+        <button onclick="getDiff()">Get Difference</button>
+        <script>
+            function getDiff() {
+                let date1 = new Date("06/30/2019"); 
+                let date2 = new Date("07/30/2019"); 
+                let Difference_In_Time = date2.getTime() - date1.getTime(); 
+                let Difference_In_Days = Difference_In_Time / (1000 * 3600 * 24); 
+                document.write("Total number of days between dates: "
+               + Difference_In_Days);               
+            }            
+        </script>
+    </body>
+</html>

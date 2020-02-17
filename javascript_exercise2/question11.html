@@ -1,0 +1,30 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Question - 11</title>
+</head>
+<body>
+    <p>
+        <strong>11. Write​ ​ a ​ ​ JavaScript​ ​ function​ ​ to​ ​ hide​ ​ email​ ​ addresses​ ​ to​ ​ protect​ ​ from​ ​ unauthorized​ ​ user. "​ abc***d@example.com​ " 
+        </strong>
+        </p>
+    <script>
+        let emailAddress = prompt('enter Email Address you want to protect');
+
+const protectEmail = email =>{
+    let splitEmail,part1,part2,midpoint;
+    splitEmail = email.split("@");
+    part1 = splitEmail[0];
+    midpoint = part1.length / 2;
+    part1 = part1.substring(0,(part1.length-midpoint));
+    part2 = splitEmail[1];
+    return part1 + "***@" + part2;
+}
+
+document.write(protectEmail(emailAddress));
+    </script>
+
+</body>
+</html>

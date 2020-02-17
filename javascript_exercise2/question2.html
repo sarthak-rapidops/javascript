@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>Question 2</title>
+    </head>
+    <body>
+        <p>
+            <strong>
+                2. Write​ ​ a ​ ​ JavaScript​ ​ program​ ​ which​ ​ accepts​ ​ a ​ ​ number​ ​ as​ ​ input​ ​ and​ ​ insert​ ​ dashes​ ​ (-) between​ ​ each​ ​ two​ ​ even​ ​ numbers.
+        </strong>
+        </p>
+        <script>
+            function q2(number) {
+                let result= [];
+                for (let i=0; i<number.length; i++) {
+                    if (number[i]%2 == 0 && number[i+1]%2 == 0) {
+                        result.push(number[i],'-');
+                    }
+                    else {
+                        result.push(number[i]);
+                    }
+                }
+                document.write(result.join('')); 
+            }
+            let number = prompt("enter Number");
+            q2(number);
+        </script>
+    </body>
+</html>

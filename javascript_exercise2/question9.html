@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>Question 9</title>        
+    </head>
+    <body>
+        <p>
+            <strong>
+                9. Write​ ​ a ​ ​ JavaScript​ ​ function​ ​ to​ ​ convert​ ​ a ​ ​ Unix​ ​ timestamp​ ​ to​ ​ time.
+        </strong>
+        </p>
+        <script>
+            function timeStamp(unixtime) {   
+                dateObj = new Date(unixtime * 1000); 
+                hours = dateObj.getUTCHours(); 
+                minutes = dateObj.getUTCMinutes(); 
+                seconds = dateObj.getUTCSeconds();   
+                formattedTime = hours + ':' + minutes+ ':' + seconds; 
+                document.write(formattedTime); ;
+            }
+            let unixtime = Date.now(); 
+            document.write(unixtime);
+            document.write("<br>");
+            timeStamp(unixtime);
+        </script>
+    </body>
+</html>

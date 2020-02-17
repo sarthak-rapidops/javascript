@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>Question 12</title>
+    </head>
+    <body>
+        <p>
+            <strong>
+                12. Write​ ​ a ​ ​ JavaScript​ ​ function​ ​ to​ ​ insert​ ​ a ​ ​ string​ ​ within​ ​ a ​ ​ string​ ​ at​ ​ a ​ ​ particular​ ​ position (default​ ​ is​ ​ 1).
+        </strong>
+        </p>
+        <script>
+            function insertString(position, addString, string) {
+                if(position == "") {
+                    position = 1;
+                } else {
+                    return  string.slice(0,position) + addString + string.slice(position); 
+                }
+            }            
+            string = prompt("enter the String");
+            addString = prompt("enter the String that you want add in String");
+            position = prompt("enter the position where you want to add string");
+            let actualString = insertString(position, addString, string);
+            document.write("String: " + string + "<br>");
+            document.write("Another String: " + addString + "<br>");
+            document.write("Merge String: " + actualString);
+        </script>
+    </body>
+</html>

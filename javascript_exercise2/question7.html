@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>Question 7</title>
+    </head>
+    <body>
+        <p>
+            <strong>
+                7. Write​ ​ a ​ ​ JavaScript​ ​ function​ ​ to​ ​ get​ ​ the​ ​ month​ ​ name​ ​ from​ ​ a ​ ​ particular​ ​ date.
+        </strong>
+        </p>
+        <input type="date" id ="mydate">
+        <button onclick="getMonthName()">Get Month</button>
+        <script>
+            function getMonthName() {
+                let date = document.getElementById("mydate").value;
+                date = date.split('-');
+                month = date[1]-1;
+                monthList= ["JAN","FEB","MARCH","APRIL","MAY","JUNE","JULY","AUG","SEP","OCT","NOV","DEC"]
+                document.write(monthList[month]);
+            }            
+        </script>
+    </body>
+</html>

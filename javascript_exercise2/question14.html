@@ -1,0 +1,27 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Question - 14</title>
+</head>
+<body>
+    <p><strong> Write​ ​ a ​ ​ JavaScript​ ​ function​ ​ to​ ​ remove​ ​ HTML/XML​ ​ tags​ ​ from​ ​ string.</strong></p>
+    <script>
+        let str = prompt('enter String with html and xml tag');
+  const removeHTMLXMLTag = str =>
+  {
+     if ((str===null) || (str===''))
+         return false;
+    else
+     str = str.toString();
+    return str.replace(/<[^>]*>/g, '');
+  }
+  removeHTMLXMLTag(str)
+ // console.log(removeHTMLXMLTag(""));
+  document.write("simple String: "+str);
+  
+  
+    </script>
+</body>
+</html>

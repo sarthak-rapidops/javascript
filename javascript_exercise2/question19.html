@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <title>Question 19</title>
+    </head>
+    <body>
+        <p>
+            <strong>
+                19. Write​ ​ a ​ ​ JavaScript​ ​ function​ ​ to​ ​ delete​ ​ particular​ ​ object​ ​ from​ ​ array​ ​ and​ ​ add​ ​ new​ ​ object​ ​ at particular​ ​ position.
+        </strong>
+        </p>
+        <script>
+            let arr = [{name:"Sarthak", surname:"Shah"},
+                        {name:"vishal", surname:"Vyas"},
+                        {name:"Harshvardhan", surname:"Rajpurohit"},
+                        {name:"Rushi", surname:"Bhagat"},
+                        {name:"Zuber", surname:"Shekh"},
+                        {name:"jigar", surname:"Kinarivala"},
+                        {name:"Harsh", surname:"Shah"},
+                        {name:"Dhaval", surname:"Patel"},
+                        {name:"Jay", surname:"Mashruvala"},
+                        {name:"Karan", surname:"Mistry"}];
+            let addObject = (arr, loc, firstname, lastname) => {                    
+                    arr[loc]= {name:firstname, surname:lastname};
+                    document.write(JSON.stringify(arr));                                        
+            };                                       
+            let loc =  prompt("enter the location where you want to add another Object");            
+            while(loc > arr.length || loc == null) {
+                loc = prompt("location would be less than"+ arr.length);
+            }
+            let firstname = prompt("enter the First Name");
+            let lastname = prompt("enter the Last Name");
+            while(firstname == null || lastname == null) {
+                    firstname = prompt("enter the First Name");
+                    lastname = prompt("enter the Last Name");
+                    alert("Firstname and Lastname is must required");
+                }
+                
+            addObject(arr, loc,firstname, lastname);
+            
+        </script>        
+    </body>
+</html>

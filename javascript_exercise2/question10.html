@@ -1,0 +1,61 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Question - 10</title>
+</head>
+<body>
+    <p>
+        <strong>10. Write​ ​ a ​ ​ JavaScript​ ​ function​ ​ to​ ​ get​ ​ time​ ​ differences​ ​ in​ ​ years,​ ​ months,​ ​ weeks,​ ​ days,​ ​ hours and​ ​ minutes​ ​ between​ ​ two​ ​ dates.
+        </strong>
+        </p>
+    <script>
+        let date1 = prompt("Enter the date1 (YYYY-MM-DD)");
+date3 = new Date(date1);
+let date2 = prompt("Enter the date2 (YYYY-MM-DD)");
+date4 = new Date(date2);
+diff = (date4 - date3);
+let newDateFormat=(diff/(1000*60*60*24));
+console.log(newDateFormat);
+    let years=0,days=0,months=0;
+    temp = newDateFormat;
+    while(temp>0){
+            if((months==0 || months==2 || months==4 || months==6||months==7||months==9||months==11) && temp>=31){
+                temp-=31;
+                months++;
+                if(months>=12){
+                    months=0;
+                    years++;
+                }
+            }
+            else if((months==3 || months==5 || months==8 || months==10) && temp>=30){
+                temp-=30;
+                months++;
+                if(months>=12){
+                    months=0;
+                    years++;
+                }
+            }
+            else if(months==1 && temp>=28) {
+                if((date4.getFullYear() + years) %4==0 ){
+                    temp-=29;    
+                }
+                else {
+                    temp-=28;
+                }
+                months++;
+                if(months>12){
+                    months=0;
+                    years++;
+                }
+            }
+            else {
+                    break;
+                }
+        }
+ 
+document.write(years+" Years,"+months+" Months, "+temp+" days");
+    </script>
+</body>
+</html>
