@@ -39,8 +39,9 @@ let validUser = () => {
                     alert("Anuthorized User");
                 }
             }  
+            document.getElementById("session").innerHTML= sessionStorage.getItem("username")
 }
-document.getElementById("session").innerHTML= sessionStorage.getItem("username")
+
 let registration = () => {
     username = document.getElementById("uname").value;
     password = document.getElementById("pass").value;

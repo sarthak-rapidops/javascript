@@ -14,6 +14,7 @@ const apiResult = JSON.parse(localStorage.getItem("assignedCourse"));
       
       <div class="card-header" id="heading-${idx}">
         <h5 class="mb-0">
+        <img src=${result.src} height=225px width=224px>
         <h5>${result.title}</h5>
         </h5>
       </div>

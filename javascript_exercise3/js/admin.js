@@ -20,8 +20,8 @@ if (apiResult) {
    
     <div class="card-header" id="heading-${idx}">
 
-   
       <h5 class="mb-0">
+      <img src=${result.src} height=225px width=224px alt= ${result.courseName}>
       <h5>${result.courseName}</h5>
       </h5>
     </div>
@@ -118,10 +118,10 @@ function ass(bid) {
         if (assignCourse) {
             switch (btnid) {
                 case apiResult[j].courseName:
-                    courseobject = { title: `${apiResult[j].courseName}`, StudenName: uname, courseLink:`${apiResult[j].courseLink}`  };
+                    courseobject = { title: `${apiResult[j].courseName}`, StudenName: uname, courseLink:`${apiResult[j].courseLink}`, src: `${apiResult[j].src}`};
                     assignCourse.push(courseobject);
                     localStorage.setItem("assignedCourse", JSON.stringify(assignCourse));
-                    alert(`${apiResult[j].courseName} is Assigned to ${uname}`);
+                    //alert(`${apiResult[j].courseName} is Assigned to ${uname}`);
                     window.location.reload();
                     break;
             }
@@ -129,10 +129,10 @@ function ass(bid) {
         else {
             switch (btnid) {
                 case apiResult[j].courseName:
-                    courseobject = { title: `${apiResult[j].courseName}`, StudenName: uname };
+                    courseobject = { title: `${apiResult[j].courseName}`, StudenName: uname, courseLink:`${apiResult[j].courseLink}`, src: `${apiResult[j].src}` };
                     courses.push(courseobject);
                     localStorage.setItem("assignedCourse", JSON.stringify(courses));
-                    alert(`${apiResult[j].courseName} is Assigned to ${uname}`);
+                    //alert(`${apiResult[j].courseName} is Assigned to ${uname}`);
                     window.location.reload();
                     break;
             }
